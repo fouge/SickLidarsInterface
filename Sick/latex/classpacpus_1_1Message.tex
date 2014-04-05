@@ -1,0 +1,58 @@
+\hypertarget{classpacpus_1_1Message}{\section{pacpus\-:\-:Message Class Reference}
+\label{classpacpus_1_1Message}\index{pacpus\-::\-Message@{pacpus\-::\-Message}}
+}
+
+
+The class containing Sick L\-D\-M\-R\-S message.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-L\-D\-M\-R\-S\-Sensor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1Message_a181a89e2d455e42308406f0656a1bc8e}{\hyperlink{classpacpus_1_1Message_a181a89e2d455e42308406f0656a1bc8e}{Message} ()}\label{classpacpus_1_1Message_a181a89e2d455e42308406f0656a1bc8e}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1Message_a33d03742882fc3f80ad8075d452314ed}{\hyperlink{classpacpus_1_1Message_a33d03742882fc3f80ad8075d452314ed}{$\sim$\-Message} ()}\label{classpacpus_1_1Message_a33d03742882fc3f80ad8075d452314ed}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1Message_a7cd03509930e6ba94ea0e830e1ef1ff2}{\hyperlink{structpacpus_1_1DataHeader}{Data\-Header} \hyperlink{classpacpus_1_1Message_a7cd03509930e6ba94ea0e830e1ef1ff2}{h\-Data}}\label{classpacpus_1_1Message_a7cd03509930e6ba94ea0e830e1ef1ff2}
+
+\begin{DoxyCompactList}\small\item\em An instance of \hyperlink{structpacpus_1_1DataHeader}{Data\-Header}. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1Message_abfbb7f1a5a9165117464f6267f959b8c}{\hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} \hyperlink{classpacpus_1_1Message_abfbb7f1a5a9165117464f6267f959b8c}{h\-Scan}}\label{classpacpus_1_1Message_abfbb7f1a5a9165117464f6267f959b8c}
+
+\begin{DoxyCompactList}\small\item\em An instance of \hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} (if data type is scan points). \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classpacpus_1_1Message_aa6139942cf5b9fb04e9363dc3bf59bb2}{body}
+\begin{DoxyCompactList}\small\item\em An array of characters \-: raw data then array of points or objects, depending on data type. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1Message_a24c98ba8213ec96b12ad27838bc7f6d1}{road\-\_\-time\-\_\-t \hyperlink{classpacpus_1_1Message_a24c98ba8213ec96b12ad27838bc7f6d1}{time}}\label{classpacpus_1_1Message_a24c98ba8213ec96b12ad27838bc7f6d1}
+
+\begin{DoxyCompactList}\small\item\em Time when the message is received. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1Message_a6d1c5d1037bbed5ac3b5f72bf6de4963}{road\-\_\-timerange\-\_\-t \hyperlink{classpacpus_1_1Message_a6d1c5d1037bbed5ac3b5f72bf6de4963}{timerange}}\label{classpacpus_1_1Message_a6d1c5d1037bbed5ac3b5f72bf6de4963}
+
+\begin{DoxyCompactList}\small\item\em Timerange \-: roughly, time between measurement of a point and the processing step (not implemented). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class containing Sick L\-D\-M\-R\-S message. 
+
+This class is used so that we can store every information sent by a L\-D\-M\-R\-S sensor. First, the raw data is stored in {\ttfamily body}. These data are then decoded and general information about the message is stored in \hyperlink{structpacpus_1_1DataHeader}{Data\-Header} and \hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} (Object data decoding is not implemented yet). Then, the body field is replaced by a \hyperlink{structpacpus_1_1ScanPoint}{Scan\-Point} or \hyperlink{structpacpus_1_1ScanObject}{Scan\-Object} array in order to be stored in D\-B\-T/\-U\-T\-C files. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classpacpus_1_1Message_aa6139942cf5b9fb04e9363dc3bf59bb2}{\index{pacpus\-::\-Message@{pacpus\-::\-Message}!body@{body}}
+\index{body@{body}!pacpus::Message@{pacpus\-::\-Message}}
+\subsubsection[{body}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pacpus\-::\-Message\-::body}}\label{classpacpus_1_1Message_aa6139942cf5b9fb04e9363dc3bf59bb2}
+
+
+An array of characters \-: raw data then array of points or objects, depending on data type. 
+
+This array pointer points to allocated in memory (basically, in heap (malloc)) and then must be freed (free) when the whole message is decoded and stored. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-L\-D\-M\-R\-S\-Sensor.\-h\end{DoxyCompactItemize}

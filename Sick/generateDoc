@@ -1,0 +1,6 @@
+INITPATH=$(pwd)
+cd /home/fouge/Documents/UTC/Heudiasyc-Lidar/pacpussensors/Sick
+doxygen Doxyfile
+cd latex
+make
+cd $INITPATH

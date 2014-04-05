@@ -1,0 +1,53 @@
+\hypertarget{structpacpus_1_1ScanPoint}{\section{pacpus\-:\-:Scan\-Point Struct Reference}
+\label{structpacpus_1_1ScanPoint}\index{pacpus\-::\-Scan\-Point@{pacpus\-::\-Scan\-Point}}
+}
+
+
+The \hyperlink{structpacpus_1_1ScanPoint}{Scan\-Point} struct.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-L\-D\-M\-R\-S\-Data.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+u\-\_\-char \hyperlink{structpacpus_1_1ScanPoint_a300ce0213fd1a9ea59687f29b68046bc}{layer\-Echo}
+\item 
+\hypertarget{structpacpus_1_1ScanPoint_a6a3519e30743dee6230e7167f4c250f3}{u\-\_\-char {\bfseries flags}}\label{structpacpus_1_1ScanPoint_a6a3519e30743dee6230e7167f4c250f3}
+
+\item 
+u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1ScanPoint_af551038f4f967b5289f50c9454bc8619}{angle}
+\item 
+\hypertarget{structpacpus_1_1ScanPoint_a74e9ebbf0df0e334e74788ce34410f80}{u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1ScanPoint_a74e9ebbf0df0e334e74788ce34410f80}{distance}}\label{structpacpus_1_1ScanPoint_a74e9ebbf0df0e334e74788ce34410f80}
+
+\begin{DoxyCompactList}\small\item\em Distance of the point from the sensor in centimeters. \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1ScanPoint_a8c32bbdc82afbd32100ceb959eb645d7}{u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1ScanPoint_a8c32bbdc82afbd32100ceb959eb645d7}{echo\-Pulse\-Width}}\label{structpacpus_1_1ScanPoint_a8c32bbdc82afbd32100ceb959eb645d7}
+
+\begin{DoxyCompactList}\small\item\em Width of echo pulse (cm) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{structpacpus_1_1ScanPoint}{Scan\-Point} struct. 
+
+Used to describe a point. Data type 0x2202\begin{DoxySeeAlso}{See Also}
+\hyperlink{structpacpus_1_1DataHeader}{Data\-Header} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structpacpus_1_1ScanPoint_af551038f4f967b5289f50c9454bc8619}{\index{pacpus\-::\-Scan\-Point@{pacpus\-::\-Scan\-Point}!angle@{angle}}
+\index{angle@{angle}!pacpus::ScanPoint@{pacpus\-::\-Scan\-Point}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}u\-\_\-int16\-\_\-t pacpus\-::\-Scan\-Point\-::angle}}\label{structpacpus_1_1ScanPoint_af551038f4f967b5289f50c9454bc8619}
+Angle in number of ticks. You can easily compute the real angle \-: $ angle (degree) = \frac{angle (ticks)}{ScanHeader.ticksPerRot}$\begin{DoxySeeAlso}{See Also}
+\hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} 
+\end{DoxySeeAlso}
+\hypertarget{structpacpus_1_1ScanPoint_a300ce0213fd1a9ea59687f29b68046bc}{\index{pacpus\-::\-Scan\-Point@{pacpus\-::\-Scan\-Point}!layer\-Echo@{layer\-Echo}}
+\index{layer\-Echo@{layer\-Echo}!pacpus::ScanPoint@{pacpus\-::\-Scan\-Point}}
+\subsubsection[{layer\-Echo}]{\setlength{\rightskip}{0pt plus 5cm}u\-\_\-char pacpus\-::\-Scan\-Point\-::layer\-Echo}}\label{structpacpus_1_1ScanPoint_a300ce0213fd1a9ea59687f29b68046bc}
+4 L\-S\-B \-: Layer (scan layer of the point) 4 M\-S\-B \-: Echo 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-L\-D\-M\-R\-S\-Data.\-h\end{DoxyCompactItemize}

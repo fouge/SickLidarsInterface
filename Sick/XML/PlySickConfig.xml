@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pacpus>
+	<components>
+		<dbiteUserInterface type="DbtPlyUserInterface"/>  	
+		<dbiteTrigger type="DbtPlyTrigger"/>	
+		<dbiteEngine type="DbtPlyEngine" datadir="/opt/pacpus/0.0.2/bin" replay_mode="1"/>
+		<DbtPlySickLMSManager type="DbtPlySickLDMRSManager" ui="0" dbt="sickldmrs_0.dbt" binFile="sickldmrs_0_data.utc"/> 
+    </components>
+    <parameters>
+    	<plugins list="libStdDbtPlayerComponents.so" />
+    </parameters>
+</pacpus>
+
+
+<!--	
+
+        <DbtPlySickLMSManager type="DbtPlySickLMSManager" ui="0" dbt="sicklms151_0.dbt" binFile="sicklms151_0_data.utc"/>
+	
+
+EXAMPLE 
+	<components>
+		<dbiteUserInterface type="DbtPlyUserInterface"/>  	
+		<dbiteTrigger type="DbtPlyTrigger"/>	
+		<dbiteEngine type="DbtPlyEngine" datadir="/opt/pacpus/0.0.2/bin" replay_mode="1"/>
+        <DbtPlySickLMSManager type="DbtPlySickLMSManager" ui="0" dbt="sicklms151_0.dbt" binFile="sicklms151_0_data.utc"/>
+        <DbtPlySickLMSManager type="DbtPlySickLDMRSManager" ui="0" dbt="sickldmrs_0.dbt" binFile="sickldmrs_0_data.utc"/> 
+    </components>
+-->

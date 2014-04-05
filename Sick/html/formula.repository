@@ -1,0 +1,2 @@
+\form#0:$ angle (°) = \frac{angle (ticks)}{ticksPerRot}$
+\form#1:$ angle (degree) = \frac{angle (ticks)}{ScanHeader.ticksPerRot}$

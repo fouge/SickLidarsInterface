@@ -1,0 +1,54 @@
+\hypertarget{structpacpus_1_1DataHeader}{\section{pacpus\-:\-:Data\-Header Struct Reference}
+\label{structpacpus_1_1DataHeader}\index{pacpus\-::\-Data\-Header@{pacpus\-::\-Data\-Header}}
+}
+
+
+The \hyperlink{structpacpus_1_1DataHeader}{Data\-Header} struct.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-L\-D\-M\-R\-S\-Data.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structpacpus_1_1DataHeader_a98d42f04ff2e365418a3bd7310f6922e}{u\-\_\-int32\-\_\-t \hyperlink{structpacpus_1_1DataHeader_a98d42f04ff2e365418a3bd7310f6922e}{magic\-Word}}\label{structpacpus_1_1DataHeader_a98d42f04ff2e365418a3bd7310f6922e}
+
+\begin{DoxyCompactList}\small\item\em 0x\-A\-F\-F\-E\-C0\-C2 for the Sick L\-D\-M\-R\-S sensor (this value must be found in order to decode the message). \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1DataHeader_acfc8ced0fba207de34a1f7215d4a6cb5}{u\-\_\-int32\-\_\-t \hyperlink{structpacpus_1_1DataHeader_acfc8ced0fba207de34a1f7215d4a6cb5}{size\-Previous\-Message}}\label{structpacpus_1_1DataHeader_acfc8ced0fba207de34a1f7215d4a6cb5}
+
+\begin{DoxyCompactList}\small\item\em Size in bytes of the previous message. \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1DataHeader_a71a67d094751e3c5a9117d5df5e86f62}{u\-\_\-int32\-\_\-t \hyperlink{structpacpus_1_1DataHeader_a71a67d094751e3c5a9117d5df5e86f62}{size\-Current\-Message}}\label{structpacpus_1_1DataHeader_a71a67d094751e3c5a9117d5df5e86f62}
+
+\begin{DoxyCompactList}\small\item\em Size of the message content without the header (\hyperlink{structpacpus_1_1DataHeader}{Data\-Header}). \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1DataHeader_a15664fcb384de15a6507e4da57294781}{u\-\_\-int8\-\_\-t \hyperlink{structpacpus_1_1DataHeader_a15664fcb384de15a6507e4da57294781}{device\-Id}}\label{structpacpus_1_1DataHeader_a15664fcb384de15a6507e4da57294781}
+
+\begin{DoxyCompactList}\small\item\em Unused in data received directly from L\-D-\/\-M\-R\-S sensors. \end{DoxyCompactList}\item 
+u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1DataHeader_a2e11011e26d0344376cb812b5b858a64}{data\-Type}
+\item 
+\hypertarget{structpacpus_1_1DataHeader_a2c9728a402325ccadd4c69f3854e9eef}{u\-\_\-int64\-\_\-t \hyperlink{structpacpus_1_1DataHeader_a2c9728a402325ccadd4c69f3854e9eef}{ntp\-Time}}\label{structpacpus_1_1DataHeader_a2c9728a402325ccadd4c69f3854e9eef}
+
+\begin{DoxyCompactList}\small\item\em Time of the sensor when the message is created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{structpacpus_1_1DataHeader}{Data\-Header} struct. 
+
+The \hyperlink{structpacpus_1_1DataHeader}{Data\-Header} struct describes general information about the message used with. On Sick L\-D\-M\-R\-S, \hyperlink{structpacpus_1_1DataHeader}{Data\-Header} corresponds exactly to the very first data carried into the whole message. See \href{docs/BAMessdatenProtokoll_LDMRSen_8014492_20110601.pdf}{\tt Ethernet data protocol L\-D-\/\-M\-R\-S, page 4}. \begin{quotation}
+Warning \-: the data from the sensor is coded in Big Endian format. \end{quotation}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structpacpus_1_1DataHeader_a2e11011e26d0344376cb812b5b858a64}{\index{pacpus\-::\-Data\-Header@{pacpus\-::\-Data\-Header}!data\-Type@{data\-Type}}
+\index{data\-Type@{data\-Type}!pacpus::DataHeader@{pacpus\-::\-Data\-Header}}
+\subsubsection[{data\-Type}]{\setlength{\rightskip}{0pt plus 5cm}u\-\_\-int16\-\_\-t pacpus\-::\-Data\-Header\-::data\-Type}}\label{structpacpus_1_1DataHeader_a2e11011e26d0344376cb812b5b858a64}
+Type of information carried into the message. Types used are \-:
+\begin{DoxyItemize}
+\item Points \-: 0x2202
+\item Objects \-: 0x2221 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-L\-D\-M\-R\-S\-Data.\-h\end{DoxyCompactItemize}

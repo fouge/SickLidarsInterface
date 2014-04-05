@@ -1,0 +1,106 @@
+\hypertarget{classpacpus_1_1SickSocket}{\section{pacpus\-:\-:Sick\-Socket Class Reference}
+\label{classpacpus_1_1SickSocket}\index{pacpus\-::\-Sick\-Socket@{pacpus\-::\-Sick\-Socket}}
+}
+
+
+The \hyperlink{classpacpus_1_1SickSocket}{Sick\-Socket} class Handles the ethernet connection with the remote sensor.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-Socket.\-h$>$}
+
+Inheritance diagram for pacpus\-:\-:Sick\-Socket\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpacpus_1_1SickSocket}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1SickSocket_a922b5337d2eae8ae855720f781743833}{void \hyperlink{classpacpus_1_1SickSocket_a922b5337d2eae8ae855720f781743833}{connect\-To\-Server} (Q\-String host, int port)}\label{classpacpus_1_1SickSocket_a922b5337d2eae8ae855720f781743833}
+
+\begin{DoxyCompactList}\small\item\em Enable the connection to the server. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickSocket_a8fb9f7cb3f60287b65aaef6cd850238c}{int \hyperlink{classpacpus_1_1SickSocket_a8fb9f7cb3f60287b65aaef6cd850238c}{socket\-Connected} ()}\label{classpacpus_1_1SickSocket_a8fb9f7cb3f60287b65aaef6cd850238c}
+
+\begin{DoxyCompactList}\small\item\em Warns about connection of the socket and launch configuration of the socket. \end{DoxyCompactList}\item 
+void \hyperlink{classpacpus_1_1SickSocket_ae839a7cf980638e2217a26b1580bd136}{socket\-Ready\-Read} ()
+\item 
+\hypertarget{classpacpus_1_1SickSocket_a472586eeb677eddb03551c1938078d45}{void \hyperlink{classpacpus_1_1SickSocket_a472586eeb677eddb03551c1938078d45}{close\-Socket} ()}\label{classpacpus_1_1SickSocket_a472586eeb677eddb03551c1938078d45}
+
+\begin{DoxyCompactList}\small\item\em Close the connection with the server. \end{DoxyCompactList}\item 
+void \hyperlink{classpacpus_1_1SickSocket_afde0ecc1860a02c55ff6d7964cdf7a3c}{send\-To\-Server} (Q\-String data)
+\begin{DoxyCompactList}\small\item\em send\-To\-Server Sends data to the remote lidar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1SickSocket_a9fdf4483ca1b800cba3bbf1f2086edce}{void \hyperlink{classpacpus_1_1SickSocket_a9fdf4483ca1b800cba3bbf1f2086edce}{configuration} ()}\label{classpacpus_1_1SickSocket_a9fdf4483ca1b800cba3bbf1f2086edce}
+
+\begin{DoxyCompactList}\small\item\em Asked for configuring sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1SickSocket_ab866c3615462372f1a1fa790a300c1d7}{\hyperlink{classpacpus_1_1SickSocket_ab866c3615462372f1a1fa790a300c1d7}{Sick\-Socket} (\hyperlink{classpacpus_1_1AbstractSickSensor}{Abstract\-Sick\-Sensor} $\ast$parent)}\label{classpacpus_1_1SickSocket_ab866c3615462372f1a1fa790a300c1d7}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickSocket_adca7f170e3fe00352175019703afdd6c}{\hyperlink{classpacpus_1_1SickSocket_adca7f170e3fe00352175019703afdd6c}{$\sim$\-Sick\-Socket} ()}\label{classpacpus_1_1SickSocket_adca7f170e3fe00352175019703afdd6c}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpacpus_1_1SickSocket_acb35dc2896ba2e6f4e4bc749f04fc71a}{socket\-Connection\-Closed} ()
+\begin{DoxyCompactList}\small\item\em Says to the user the connection is closed. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickSocket_aea9be9bcfc97681ed665cf4095f351cb}{void \hyperlink{classpacpus_1_1SickSocket_aea9be9bcfc97681ed665cf4095f351cb}{socket\-Error} (Q\-Abstract\-Socket\-::\-Socket\-Error e)}\label{classpacpus_1_1SickSocket_aea9be9bcfc97681ed665cf4095f351cb}
+
+\begin{DoxyCompactList}\small\item\em Warns the user an error occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classpacpus_1_1SickSocket}{Sick\-Socket} class Handles the ethernet connection with the remote sensor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classpacpus_1_1SickSocket_afde0ecc1860a02c55ff6d7964cdf7a3c}{\index{pacpus\-::\-Sick\-Socket@{pacpus\-::\-Sick\-Socket}!send\-To\-Server@{send\-To\-Server}}
+\index{send\-To\-Server@{send\-To\-Server}!pacpus::SickSocket@{pacpus\-::\-Sick\-Socket}}
+\subsubsection[{send\-To\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-Socket\-::send\-To\-Server (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classpacpus_1_1SickSocket_afde0ecc1860a02c55ff6d7964cdf7a3c}
+
+
+send\-To\-Server Sends data to the remote lidar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to be sent, translated in A\-S\-C\-I\-I. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpacpus_1_1SickSocket_acb35dc2896ba2e6f4e4bc749f04fc71a}{\index{pacpus\-::\-Sick\-Socket@{pacpus\-::\-Sick\-Socket}!socket\-Connection\-Closed@{socket\-Connection\-Closed}}
+\index{socket\-Connection\-Closed@{socket\-Connection\-Closed}!pacpus::SickSocket@{pacpus\-::\-Sick\-Socket}}
+\subsubsection[{socket\-Connection\-Closed}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-Socket\-::socket\-Connection\-Closed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{classpacpus_1_1SickSocket_acb35dc2896ba2e6f4e4bc749f04fc71a}
+
+
+Says to the user the connection is closed. 
+
+protected slot \hypertarget{classpacpus_1_1SickSocket_ae839a7cf980638e2217a26b1580bd136}{\index{pacpus\-::\-Sick\-Socket@{pacpus\-::\-Sick\-Socket}!socket\-Ready\-Read@{socket\-Ready\-Read}}
+\index{socket\-Ready\-Read@{socket\-Ready\-Read}!pacpus::SickSocket@{pacpus\-::\-Sick\-Socket}}
+\subsubsection[{socket\-Ready\-Read}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-Socket\-::socket\-Ready\-Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classpacpus_1_1SickSocket_ae839a7cf980638e2217a26b1580bd136}
+Called when incoming data is received. Create an event and send it to the sensor's handler.\begin{DoxySeeAlso}{See Also}
+Abstract\-Sick\-Component 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-Socket.\-h\item 
+Sick\-Socket.\-cpp\end{DoxyCompactItemize}

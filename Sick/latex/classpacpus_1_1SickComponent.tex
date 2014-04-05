@@ -1,0 +1,98 @@
+\hypertarget{classpacpus_1_1SickComponent}{\section{pacpus\-:\-:Sick\-Component Class Reference}
+\label{classpacpus_1_1SickComponent}\index{pacpus\-::\-Sick\-Component@{pacpus\-::\-Sick\-Component}}
+}
+
+
+The \hyperlink{classpacpus_1_1SickComponent}{Sick\-Component} class.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-Component.\-h$>$}
+
+Inheritance diagram for pacpus\-:\-:Sick\-Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpacpus_1_1SickComponent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1SickComponent_a173293f307240ec6872d5be9a8790c56}{\hyperlink{classpacpus_1_1SickComponent_a173293f307240ec6872d5be9a8790c56}{Sick\-Component} (Q\-String name)}\label{classpacpus_1_1SickComponent_a173293f307240ec6872d5be9a8790c56}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickComponent_a318cc1a398812c71a47661b22ff36e22}{\hyperlink{classpacpus_1_1SickComponent_a318cc1a398812c71a47661b22ff36e22}{$\sim$\-Sick\-Component} ()}\label{classpacpus_1_1SickComponent_a318cc1a398812c71a47661b22ff36e22}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickComponent_a61c8eea3d4878b769fcaee1e00d3c471}{void {\bfseries run} ()}\label{classpacpus_1_1SickComponent_a61c8eea3d4878b769fcaee1e00d3c471}
+
+\item 
+virtual void \hyperlink{classpacpus_1_1SickComponent_a4524cb582e5fdf9dbd059072bea0d49b}{stop\-Activity} ()
+\item 
+virtual void \hyperlink{classpacpus_1_1SickComponent_a93980139bab330f3ef6bf818afba70a2}{start\-Activity} ()
+\item 
+virtual \\*
+Component\-Base\-::\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N \hyperlink{classpacpus_1_1SickComponent_accc413cdd2c4f5b8aacb14655b8a86d2}{configure\-Component} (Xml\-Component\-Config config)
+\begin{DoxyCompactList}\small\item\em Configure compenent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1SickComponent_a4ac4764e115fb41e6e9df77e05bcb14f}{\hyperlink{classpacpus_1_1SickComponent}{Sick\-Component} $\ast$ {\bfseries my\-Parent}}\label{classpacpus_1_1SickComponent_a4ac4764e115fb41e6e9df77e05bcb14f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classpacpus_1_1SickComponent}{Sick\-Component} class. 
+
+This class defines a P\-A\-C\-P\-U\-S component used to acquire Sick lidars data. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classpacpus_1_1SickComponent_accc413cdd2c4f5b8aacb14655b8a86d2}{\index{pacpus\-::\-Sick\-Component@{pacpus\-::\-Sick\-Component}!configure\-Component@{configure\-Component}}
+\index{configure\-Component@{configure\-Component}!pacpus::SickComponent@{pacpus\-::\-Sick\-Component}}
+\subsubsection[{configure\-Component}]{\setlength{\rightskip}{0pt plus 5cm}Component\-Base\-::\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N pacpus\-::\-Sick\-Component\-::configure\-Component (
+\begin{DoxyParamCaption}
+\item[{Xml\-Component\-Config}]{config}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpacpus_1_1SickComponent_accc413cdd2c4f5b8aacb14655b8a86d2}
+
+
+Configure compenent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & X\-M\-L file passed in order to configure the Sick Component.\\
+\hline
+\end{DoxyParams}
+This function instanciate every sensors configured through the X\-M\-L file. The X\-M\-L file must be formated as expected by this function. Depending on used sensors and how many, you should define these three property in a \char`\"{}\-Sick\char`\"{} node (X must start from '0') \-:
+\begin{DoxyItemize}
+\item sickldmrs\-\_\-\-X
+\item sicklms151\-\_\-\-X
+\item sicklms511\-\_\-\-X
+\end{DoxyItemize}
+
+For example, let's say we have two Sick L\-M\-S151, one L\-D\-M\-R\-S and one L\-M\-S511 \-:
+
+{\ttfamily  $<$\-Sick type=\char`\"{}\-Sick\-Component\char`\"{} sickldmrs\-\_\-0=\char`\"{}192.\-168.\-0.\-1\-:2111\char`\"{} sicklms151\-\_\-0=\char`\"{}192.\-168.\-0.\-10\-:2111\char`\"{} sicklms151\-\_\-1=\char`\"{}192.\-168.\-0.\-11\-:2111\char`\"{} sicklms511\-\_\-0=\char`\"{}192.\-168.\-1.\-50\-:2111\char`\"{}$>$ }
+
+Do not forget {\ttfamily type=\char`\"{}\-Sick\-Component\char`\"{}}. \hypertarget{classpacpus_1_1SickComponent_a93980139bab330f3ef6bf818afba70a2}{\index{pacpus\-::\-Sick\-Component@{pacpus\-::\-Sick\-Component}!start\-Activity@{start\-Activity}}
+\index{start\-Activity@{start\-Activity}!pacpus::SickComponent@{pacpus\-::\-Sick\-Component}}
+\subsubsection[{start\-Activity}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-Component\-::start\-Activity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpacpus_1_1SickComponent_a93980139bab330f3ef6bf818afba70a2}
+To start the processing thread \hypertarget{classpacpus_1_1SickComponent_a4524cb582e5fdf9dbd059072bea0d49b}{\index{pacpus\-::\-Sick\-Component@{pacpus\-::\-Sick\-Component}!stop\-Activity@{stop\-Activity}}
+\index{stop\-Activity@{stop\-Activity}!pacpus::SickComponent@{pacpus\-::\-Sick\-Component}}
+\subsubsection[{stop\-Activity}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-Component\-::stop\-Activity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpacpus_1_1SickComponent_a4524cb582e5fdf9dbd059072bea0d49b}
+To stop the processing thread 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-Component.\-h\item 
+Sick\-Component.\-cpp\end{DoxyCompactItemize}

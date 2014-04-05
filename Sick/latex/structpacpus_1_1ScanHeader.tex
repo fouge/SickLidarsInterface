@@ -1,0 +1,81 @@
+\hypertarget{structpacpus_1_1ScanHeader}{\section{pacpus\-:\-:Scan\-Header Struct Reference}
+\label{structpacpus_1_1ScanHeader}\index{pacpus\-::\-Scan\-Header@{pacpus\-::\-Scan\-Header}}
+}
+
+
+The \hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} struct.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-L\-D\-M\-R\-S\-Data.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structpacpus_1_1ScanHeader_a1cf721c87e6bf8c022dc134bc1a861f1}{u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_a1cf721c87e6bf8c022dc134bc1a861f1}{scan\-Number}}\label{structpacpus_1_1ScanHeader_a1cf721c87e6bf8c022dc134bc1a861f1}
+
+\begin{DoxyCompactList}\small\item\em Number of the scan since the sensor started measuring. \end{DoxyCompactList}\item 
+u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_aad5f68bdf71fe32c0325f69919355aa7}{scanner\-Status}
+\begin{DoxyCompactList}\small\item\em Status of the scanner. \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1ScanHeader_a55369f8979b18292592fe7e63538e8b0}{u\-\_\-int16\-\_\-t {\bfseries phase\-Offset}}\label{structpacpus_1_1ScanHeader_a55369f8979b18292592fe7e63538e8b0}
+
+\item 
+\hypertarget{structpacpus_1_1ScanHeader_a498752799f73dcdea074bb346be9c909}{u\-\_\-int64\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_a498752799f73dcdea074bb346be9c909}{start\-Ntp\-Time}}\label{structpacpus_1_1ScanHeader_a498752799f73dcdea074bb346be9c909}
+
+\begin{DoxyCompactList}\small\item\em N\-T\-P time first measurement. \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1ScanHeader_a9383aebf0708f9608d2ee0a0b4cb8c28}{u\-\_\-int64\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_a9383aebf0708f9608d2ee0a0b4cb8c28}{end\-Ntp\-Time}}\label{structpacpus_1_1ScanHeader_a9383aebf0708f9608d2ee0a0b4cb8c28}
+
+\begin{DoxyCompactList}\small\item\em N\-T\-P time last measurement. \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1ScanHeader_ae90050c5f517aab0ddec6a0a7a905e97}{u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_ae90050c5f517aab0ddec6a0a7a905e97}{ticks\-Per\-Rot}}\label{structpacpus_1_1ScanHeader_ae90050c5f517aab0ddec6a0a7a905e97}
+
+\begin{DoxyCompactList}\small\item\em Angle ticks per rotation (used to compute the real angle of a point) \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1ScanHeader_a805ffbef47d7e001ec4d22b8a56afd87}{int16\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_a805ffbef47d7e001ec4d22b8a56afd87}{start\-Angle}}\label{structpacpus_1_1ScanHeader_a805ffbef47d7e001ec4d22b8a56afd87}
+
+\begin{DoxyCompactList}\small\item\em Angle of the first measured value. \end{DoxyCompactList}\item 
+\hypertarget{structpacpus_1_1ScanHeader_ab7342b6eb6939702c6a2d0f61cd212d8}{int16\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_ab7342b6eb6939702c6a2d0f61cd212d8}{end\-Angle}}\label{structpacpus_1_1ScanHeader_ab7342b6eb6939702c6a2d0f61cd212d8}
+
+\begin{DoxyCompactList}\small\item\em Angle of the last measured value. \end{DoxyCompactList}\item 
+u\-\_\-int16\-\_\-t \hyperlink{structpacpus_1_1ScanHeader_a92f397bf893b9869c8847eb4a39a8005}{num\-Points}
+\begin{DoxyCompactList}\small\item\em Number of scanned points during this scan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} struct. 
+
+General information about points measured. Data type is 0x2202 \begin{DoxySeeAlso}{See Also}
+\hyperlink{structpacpus_1_1DataHeader}{Data\-Header}
+\end{DoxySeeAlso}
+see Ethernet data protocol L\-D-\/\-M\-R\-S page 5 
+
+\subsection{Member Data Documentation}
+\hypertarget{structpacpus_1_1ScanHeader_a92f397bf893b9869c8847eb4a39a8005}{\index{pacpus\-::\-Scan\-Header@{pacpus\-::\-Scan\-Header}!num\-Points@{num\-Points}}
+\index{num\-Points@{num\-Points}!pacpus::ScanHeader@{pacpus\-::\-Scan\-Header}}
+\subsubsection[{num\-Points}]{\setlength{\rightskip}{0pt plus 5cm}u\-\_\-int16\-\_\-t pacpus\-::\-Scan\-Header\-::num\-Points}}\label{structpacpus_1_1ScanHeader_a92f397bf893b9869c8847eb4a39a8005}
+
+
+Number of scanned points during this scan. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structpacpus_1_1ScanPoint}{Scan\-Point} 
+\end{DoxySeeAlso}
+\hypertarget{structpacpus_1_1ScanHeader_aad5f68bdf71fe32c0325f69919355aa7}{\index{pacpus\-::\-Scan\-Header@{pacpus\-::\-Scan\-Header}!scanner\-Status@{scanner\-Status}}
+\index{scanner\-Status@{scanner\-Status}!pacpus::ScanHeader@{pacpus\-::\-Scan\-Header}}
+\subsubsection[{scanner\-Status}]{\setlength{\rightskip}{0pt plus 5cm}u\-\_\-int16\-\_\-t pacpus\-::\-Scan\-Header\-::scanner\-Status}}\label{structpacpus_1_1ScanHeader_aad5f68bdf71fe32c0325f69919355aa7}
+
+
+Status of the scanner. 
+
+
+\begin{DoxyItemize}
+\item 0x0007\-: reserved,
+\item 0x0008\-: set frequency reached,
+\item 0x0010\-: external sync signal detected,
+\item 0x0020\-: sync ok,
+\item 0x0040\-: sync master (instead of slave),
+\item 0x\-F\-F80\-: reserved 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-L\-D\-M\-R\-S\-Data.\-h\end{DoxyCompactItemize}

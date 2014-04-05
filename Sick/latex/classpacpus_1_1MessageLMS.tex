@@ -1,0 +1,52 @@
+\hypertarget{classpacpus_1_1MessageLMS}{\section{pacpus\-:\-:Message\-L\-M\-S Class Reference}
+\label{classpacpus_1_1MessageLMS}\index{pacpus\-::\-Message\-L\-M\-S@{pacpus\-::\-Message\-L\-M\-S}}
+}
+
+
+The class carrying Sick L\-M\-S message.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-L\-M\-S\-Sensor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1MessageLMS_a20ef9a5b76448142f0bf88a859c5d042}{\hyperlink{classpacpus_1_1MessageLMS_a20ef9a5b76448142f0bf88a859c5d042}{Message\-L\-M\-S} ()}\label{classpacpus_1_1MessageLMS_a20ef9a5b76448142f0bf88a859c5d042}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1MessageLMS_a586746e0e35aa83419044efd92556ea4}{\hyperlink{classpacpus_1_1MessageLMS_a586746e0e35aa83419044efd92556ea4}{$\sim$\-Message\-L\-M\-S} ()}\label{classpacpus_1_1MessageLMS_a586746e0e35aa83419044efd92556ea4}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1MessageLMS_a5448754297046a46de36a32e8500f93e}{\hyperlink{structpacpus_1_1__scanData}{scan\-Data} \hyperlink{classpacpus_1_1MessageLMS_a5448754297046a46de36a32e8500f93e}{data}}\label{classpacpus_1_1MessageLMS_a5448754297046a46de36a32e8500f93e}
+
+\begin{DoxyCompactList}\small\item\em Every needed information about the scan (general info + scan points). \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1MessageLMS_a6b8f1da7a50fae0c3d1b4adeec39eff7}{long \hyperlink{classpacpus_1_1MessageLMS_a6b8f1da7a50fae0c3d1b4adeec39eff7}{msg\-Size}}\label{classpacpus_1_1MessageLMS_a6b8f1da7a50fae0c3d1b4adeec39eff7}
+
+\begin{DoxyCompactList}\small\item\em Size of the message. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1MessageLMS_a7570d407b4cdac7450adde9448b231ae}{std\-::vector$<$ std\-::string $>$ $\ast$ \hyperlink{classpacpus_1_1MessageLMS_a7570d407b4cdac7450adde9448b231ae}{split\-Message}}\label{classpacpus_1_1MessageLMS_a7570d407b4cdac7450adde9448b231ae}
+
+\begin{DoxyCompactList}\small\item\em The message is split into an array of string in order to be processed easily. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1MessageLMS_a87494c8ed7daece40f1456a0b028990a}{char $\ast$ \hyperlink{classpacpus_1_1MessageLMS_a87494c8ed7daece40f1456a0b028990a}{body}}\label{classpacpus_1_1MessageLMS_a87494c8ed7daece40f1456a0b028990a}
+
+\begin{DoxyCompactList}\small\item\em Raw data. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1MessageLMS_a3b81e17d0f28e13933e50337dcf5e45b}{road\-\_\-time\-\_\-t \hyperlink{classpacpus_1_1MessageLMS_a3b81e17d0f28e13933e50337dcf5e45b}{time}}\label{classpacpus_1_1MessageLMS_a3b81e17d0f28e13933e50337dcf5e45b}
+
+\begin{DoxyCompactList}\small\item\em Time when the first packet of the message is received. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1MessageLMS_ab2158c796fc5510232ed9a222264f899}{road\-\_\-timerange\-\_\-t \hyperlink{classpacpus_1_1MessageLMS_ab2158c796fc5510232ed9a222264f899}{timerange}}\label{classpacpus_1_1MessageLMS_ab2158c796fc5510232ed9a222264f899}
+
+\begin{DoxyCompactList}\small\item\em Timerange \-: roughly, time between measurement of a point and the processing step (not implemented). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class carrying Sick L\-M\-S message. 
+
+This class is used so that we can store every information sent by a Sick L\-M\-S sensor. First, the raw data is stored in {\ttfamily body}. Then, if the message is relevant, {\ttfamily split\-Message} is instanciated in order to parse easily information from the sensor. These data are then decoded and stored in the scan\-Data structure. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-L\-M\-S\-Sensor.\-h\end{DoxyCompactItemize}

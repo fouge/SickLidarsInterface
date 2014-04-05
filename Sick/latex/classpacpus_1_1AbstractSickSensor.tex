@@ -1,0 +1,105 @@
+\hypertarget{classpacpus_1_1AbstractSickSensor}{\section{pacpus\-:\-:Abstract\-Sick\-Sensor Class Reference}
+\label{classpacpus_1_1AbstractSickSensor}\index{pacpus\-::\-Abstract\-Sick\-Sensor@{pacpus\-::\-Abstract\-Sick\-Sensor}}
+}
+
+
+The \hyperlink{classpacpus_1_1AbstractSickSensor}{Abstract\-Sick\-Sensor} class.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\-Sick\-Sensor.\-h$>$}
+
+Inheritance diagram for pacpus\-:\-:Abstract\-Sick\-Sensor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpacpus_1_1AbstractSickSensor}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpacpus_1_1AbstractSickSensor_a566931db0cd4e37110d60f3a25eb8de6}{custom\-Event} (Q\-Event $\ast$e)=0
+\begin{DoxyCompactList}\small\item\em custom\-Event is a slot called when connected to a signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1AbstractSickSensor_ae0577b049c0ad3dd79f1d56bcc9f3fe2}{void {\bfseries run} ()}\label{classpacpus_1_1AbstractSickSensor_ae0577b049c0ad3dd79f1d56bcc9f3fe2}
+
+\item 
+virtual void \hyperlink{classpacpus_1_1AbstractSickSensor_a14c6da8df61d91f2b63439df00fd5d6a}{stop\-Activity} ()=0
+\item 
+virtual void \hyperlink{classpacpus_1_1AbstractSickSensor_af8e017866cf70db766dbd11b60a52425}{start\-Activity} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1AbstractSickSensor_af030c5aadd2868dc741b25ba1dc07f9f}{\hyperlink{classpacpus_1_1SickSocket}{Sick\-Socket} $\ast$ {\bfseries S\-\_\-socket}}\label{classpacpus_1_1AbstractSickSensor_af030c5aadd2868dc741b25ba1dc07f9f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1AbstractSickSensor_ab617c6d1973124fa26053c7b928920aa}{Q\-String \hyperlink{classpacpus_1_1AbstractSickSensor_ab617c6d1973124fa26053c7b928920aa}{host\-\_\-}}\label{classpacpus_1_1AbstractSickSensor_ab617c6d1973124fa26053c7b928920aa}
+
+\begin{DoxyCompactList}\small\item\em The Sick\-L\-D\-M\-R\-S I\-P or hostname. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1AbstractSickSensor_a58a4923a77b6be4d5847837e57be3b76}{int \hyperlink{classpacpus_1_1AbstractSickSensor_a58a4923a77b6be4d5847837e57be3b76}{port\-\_\-}}\label{classpacpus_1_1AbstractSickSensor_a58a4923a77b6be4d5847837e57be3b76}
+
+\begin{DoxyCompactList}\small\item\em The Sick\-L\-D\-M\-R\-S port. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1AbstractSickSensor_a2cefb63d92089cab86f874a3390acb28}{bool \hyperlink{classpacpus_1_1AbstractSickSensor_a2cefb63d92089cab86f874a3390acb28}{recording}}\label{classpacpus_1_1AbstractSickSensor_a2cefb63d92089cab86f874a3390acb28}
+
+\begin{DoxyCompactList}\small\item\em If data need to be recorded, set this member to true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classpacpus_1_1AbstractSickSensor}{Abstract\-Sick\-Sensor} class. 
+
+The \hyperlink{classpacpus_1_1AbstractSickSensor}{Abstract\-Sick\-Sensor} class provides the abstract model for implementing sensor interfaces using \hyperlink{classpacpus_1_1SickComponent}{Sick\-Component}, used with the P\-A\-C\-P\-U\-S Framework. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classpacpus_1_1AbstractSickSensor_a566931db0cd4e37110d60f3a25eb8de6}{\index{pacpus\-::\-Abstract\-Sick\-Sensor@{pacpus\-::\-Abstract\-Sick\-Sensor}!custom\-Event@{custom\-Event}}
+\index{custom\-Event@{custom\-Event}!pacpus::AbstractSickSensor@{pacpus\-::\-Abstract\-Sick\-Sensor}}
+\subsubsection[{custom\-Event}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pacpus\-::\-Abstract\-Sick\-Sensor\-::custom\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Event $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [slot]}}}\label{classpacpus_1_1AbstractSickSensor_a566931db0cd4e37110d60f3a25eb8de6}
+
+
+custom\-Event is a slot called when connected to a signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Q\-Event that carries information from sensor.\\
+\hline
+\end{DoxyParams}
+Sick sensor interface implementation uses this slot to get data from the remote sensor, using I\-P packets. As long as Sick sensors use T\-C\-P/\-I\-P interface, it is advised to use this slot to get the packets from the device. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classpacpus_1_1SickFrameEvent}{Sick\-Frame\-Event} 
+\end{DoxySeeAlso}
+\hypertarget{classpacpus_1_1AbstractSickSensor_af8e017866cf70db766dbd11b60a52425}{\index{pacpus\-::\-Abstract\-Sick\-Sensor@{pacpus\-::\-Abstract\-Sick\-Sensor}!start\-Activity@{start\-Activity}}
+\index{start\-Activity@{start\-Activity}!pacpus::AbstractSickSensor@{pacpus\-::\-Abstract\-Sick\-Sensor}}
+\subsubsection[{start\-Activity}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pacpus\-::\-Abstract\-Sick\-Sensor\-::start\-Activity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classpacpus_1_1AbstractSickSensor_af8e017866cf70db766dbd11b60a52425}
+to start the processing thread 
+
+Implemented in \hyperlink{classpacpus_1_1SickLDMRSSensor_a2b82c6f677fe7e7e712b7397fb5390ee}{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}, and \hyperlink{classpacpus_1_1SickLMSSensor_a6268a9b5b17db84b662c562ea332541f}{pacpus\-::\-Sick\-L\-M\-S\-Sensor}.
+
+\hypertarget{classpacpus_1_1AbstractSickSensor_a14c6da8df61d91f2b63439df00fd5d6a}{\index{pacpus\-::\-Abstract\-Sick\-Sensor@{pacpus\-::\-Abstract\-Sick\-Sensor}!stop\-Activity@{stop\-Activity}}
+\index{stop\-Activity@{stop\-Activity}!pacpus::AbstractSickSensor@{pacpus\-::\-Abstract\-Sick\-Sensor}}
+\subsubsection[{stop\-Activity}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pacpus\-::\-Abstract\-Sick\-Sensor\-::stop\-Activity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classpacpus_1_1AbstractSickSensor_a14c6da8df61d91f2b63439df00fd5d6a}
+to stop the processing thread 
+
+Implemented in \hyperlink{classpacpus_1_1SickLDMRSSensor_a5b3674df80e98093692fac9643819ab5}{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}, and \hyperlink{classpacpus_1_1SickLMSSensor_a082417a753cef1d4f726c50b2e14a4d0}{pacpus\-::\-Sick\-L\-M\-S\-Sensor}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Abstract\-Sick\-Sensor.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,264 @@
+\hypertarget{classpacpus_1_1SickLDMRSSensor}{\section{pacpus\-:\-:Sick\-L\-D\-M\-R\-S\-Sensor Class Reference}
+\label{classpacpus_1_1SickLDMRSSensor}\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+}
+
+
+The class implenting receiving, decoding and storing process of Sick L\-D-\/\-M\-R\-S data.  
+
+
+
+
+{\ttfamily \#include $<$Sick\-L\-D\-M\-R\-S\-Sensor.\-h$>$}
+
+Inheritance diagram for pacpus\-:\-:Sick\-L\-D\-M\-R\-S\-Sensor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpacpus_1_1SickLDMRSSensor}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpacpus_1_1SickLDMRSSensor_aff9f78d73af6aaf021cfbe9a521c6fad}{custom\-Event} (Q\-Event $\ast$e)
+\begin{DoxyCompactList}\small\item\em custom\-Event allows to receive the incoming data and store them into known structures. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickLDMRSSensor_af88f26756d94460914ab88fb81f13768}{void \hyperlink{classpacpus_1_1SickLDMRSSensor_af88f26756d94460914ab88fb81f13768}{configure} ()}\label{classpacpus_1_1SickLDMRSSensor_af88f26756d94460914ab88fb81f13768}
+
+\begin{DoxyCompactList}\small\item\em Configure the object, not used for the moment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1SickLDMRSSensor_a0af00a3cf38fe5ae6a71038af4eb2a35}{\hyperlink{classpacpus_1_1SickLDMRSSensor_a0af00a3cf38fe5ae6a71038af4eb2a35}{Sick\-L\-D\-M\-R\-S\-Sensor} (Q\-Object $\ast$parent)}\label{classpacpus_1_1SickLDMRSSensor_a0af00a3cf38fe5ae6a71038af4eb2a35}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classpacpus_1_1SickLDMRSSensor_a33518ebb2123cb2bccc68dfe1911769a}{Sick\-L\-D\-M\-R\-S\-Sensor} (Q\-Object $\ast$parent, Q\-String name, Q\-String ip, int port, int \hyperlink{classpacpus_1_1AbstractSickSensor_a2cefb63d92089cab86f874a3390acb28}{recording})
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpacpus_1_1SickLDMRSSensor}{Sick\-L\-D\-M\-R\-S\-Sensor} constructor. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickLDMRSSensor_af96ae9367377749421b5a541b107f83b}{\hyperlink{classpacpus_1_1SickLDMRSSensor_af96ae9367377749421b5a541b107f83b}{$\sim$\-Sick\-L\-D\-M\-R\-S\-Sensor} ()}\label{classpacpus_1_1SickLDMRSSensor_af96ae9367377749421b5a541b107f83b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classpacpus_1_1SickLDMRSSensor_a8579829420ffd7a6e9e85d2ae7adaea4}{void {\bfseries run} ()}\label{classpacpus_1_1SickLDMRSSensor_a8579829420ffd7a6e9e85d2ae7adaea4}
+
+\item 
+void \hyperlink{classpacpus_1_1SickLDMRSSensor_a5b3674df80e98093692fac9643819ab5}{stop\-Activity} ()
+\item 
+void \hyperlink{classpacpus_1_1SickLDMRSSensor_a2b82c6f677fe7e7e712b7397fb5390ee}{start\-Activity} ()
+\item 
+void \hyperlink{classpacpus_1_1SickLDMRSSensor_a5a3dd4f58b4d43fed06ff28db5822d5d}{split\-Packet} (const char $\ast$packet, const int length, road\-\_\-time\-\_\-t time)
+\begin{DoxyCompactList}\small\item\em split\-Packet reconstitute incoming data and find messages. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classpacpus_1_1SickLDMRSSensor_a01d9dc51e9220f828cb3651cf8b21e09}{process\-Message} (\hyperlink{classpacpus_1_1MessageLDMRS}{Message\-L\-D\-M\-R\-S} \&msg)
+\begin{DoxyCompactList}\small\item\em Process/decode a message. \end{DoxyCompactList}\item 
+u\-\_\-int32\-\_\-t \hyperlink{classpacpus_1_1SickLDMRSSensor_a223429320a452ab8bd50ec2b11691f91}{find\-Magic\-Word} (const char $\ast$message, const unsigned length)
+\begin{DoxyCompactList}\small\item\em Find the position of the magic word into the array and returns this index. \end{DoxyCompactList}\item 
+u\-\_\-int32\-\_\-t \hyperlink{classpacpus_1_1SickLDMRSSensor_ae128ee5ba4b2800822b9776a3001b999}{get\-Message\-Size} (const char $\ast$message, const unsigned length, const long magic\-Word\-Index)
+\begin{DoxyCompactList}\small\item\em get\-Message\-Size get the message size of the entire message. \end{DoxyCompactList}\item 
+bool \hyperlink{classpacpus_1_1SickLDMRSSensor_a1032c614191b0bbd9a5d2c36f362e70b}{is\-Message\-Complete} (const unsigned length, const long size)
+\begin{DoxyCompactList}\small\item\em is\-Message\-Complete compare the size of the message read into the message and the length of the received data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classpacpus_1_1SickLDMRSSensor_a82b3667ed7a09898e73287d7ba620eb3}{\hyperlink{classpacpus_1_1SickSocket}{Sick\-Socket} $\ast$ \hyperlink{classpacpus_1_1SickLDMRSSensor_a82b3667ed7a09898e73287d7ba620eb3}{S\-\_\-socket}}\label{classpacpus_1_1SickLDMRSSensor_a82b3667ed7a09898e73287d7ba620eb3}
+
+\begin{DoxyCompactList}\small\item\em S\-\_\-socket, used to receive and send data to the remote sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The class implenting receiving, decoding and storing process of Sick L\-D-\/\-M\-R\-S data. 
+
+This class can be used as a particular thread to acquire data from Sick L\-D\-M\-R\-S sensors. The Ethernet interface is used to get data from the sensor. Thus, the goal of this class is to get packets and decode them. Also, it offers the possibility to store all relevant information in two files (.dbt and .utc). It can be managed by \hyperlink{classpacpus_1_1SickComponent}{Sick\-Component} objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpacpus_1_1SickLDMRSSensor_a33518ebb2123cb2bccc68dfe1911769a}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!Sick\-L\-D\-M\-R\-S\-Sensor@{Sick\-L\-D\-M\-R\-S\-Sensor}}
+\index{Sick\-L\-D\-M\-R\-S\-Sensor@{Sick\-L\-D\-M\-R\-S\-Sensor}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{Sick\-L\-D\-M\-R\-S\-Sensor}]{\setlength{\rightskip}{0pt plus 5cm}pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::\-Sick\-L\-D\-M\-R\-S\-Sensor (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent, }
+\item[{Q\-String}]{name, }
+\item[{Q\-String}]{ip, }
+\item[{int}]{port, }
+\item[{int}]{recording}
+\end{DoxyParamCaption}
+)}}\label{classpacpus_1_1SickLDMRSSensor_a33518ebb2123cb2bccc68dfe1911769a}
+
+
+\hyperlink{classpacpus_1_1SickLDMRSSensor}{Sick\-L\-D\-M\-R\-S\-Sensor} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Basically, a \hyperlink{classpacpus_1_1SickComponent}{Sick\-Component} object. \\
+\hline
+{\em name} & Name of the sensor in order to write on .dbt and .utc files and to recognize every sensors used. \\
+\hline
+{\em ip} & The I\-P address of the remote Sick L\-D\-M\-R\-S sensor. \\
+\hline
+{\em port} & The port of the remote Sick L\-D\-M\-R\-S sensor. \\
+\hline
+{\em recording} & If {\ttfamily true}, data is recorded into dbt + utc files. Data is not recorded otherwise. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpacpus_1_1SickLDMRSSensor_aff9f78d73af6aaf021cfbe9a521c6fad}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!custom\-Event@{custom\-Event}}
+\index{custom\-Event@{custom\-Event}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{custom\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::custom\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Event $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classpacpus_1_1SickLDMRSSensor_aff9f78d73af6aaf021cfbe9a521c6fad}
+
+
+custom\-Event allows to receive the incoming data and store them into known structures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Event that carries the Ethernet packets and receiving time. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpacpus_1_1SickLDMRSSensor_a223429320a452ab8bd50ec2b11691f91}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!find\-Magic\-Word@{find\-Magic\-Word}}
+\index{find\-Magic\-Word@{find\-Magic\-Word}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{find\-Magic\-Word}]{\setlength{\rightskip}{0pt plus 5cm}u\-\_\-int32\-\_\-t pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::find\-Magic\-Word (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message, }
+\item[{const unsigned}]{length}
+\end{DoxyParamCaption}
+)}}\label{classpacpus_1_1SickLDMRSSensor_a223429320a452ab8bd50ec2b11691f91}
+
+
+Find the position of the magic word into the array and returns this index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Array of characters, raw data received from sensor. \\
+\hline
+{\em length} & Length of the array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item {\bfseries -\/1} if no magic word is found
+\item {\bfseries position} of the magic word otherwise 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{classpacpus_1_1SickLDMRSSensor_ae128ee5ba4b2800822b9776a3001b999}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!get\-Message\-Size@{get\-Message\-Size}}
+\index{get\-Message\-Size@{get\-Message\-Size}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{get\-Message\-Size}]{\setlength{\rightskip}{0pt plus 5cm}u\-\_\-int32\-\_\-t pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::get\-Message\-Size (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message, }
+\item[{const unsigned}]{length, }
+\item[{const long}]{magic\-Word\-Index}
+\end{DoxyParamCaption}
+)}}\label{classpacpus_1_1SickLDMRSSensor_ae128ee5ba4b2800822b9776a3001b999}
+
+
+get\-Message\-Size get the message size of the entire message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Raw data of the message. \\
+\hline
+{\em length} & Length of the raw data received. \\
+\hline
+{\em magic\-Word\-Index} & First element of the message, used to get the size of the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The {\bfseries size} of the whole message.
+\end{DoxyReturn}
+The size of the message is found inside the message thanks to an offset after the index of the Magic Word.
+\begin{DoxyItemize}
+\item The first header of the message that contains the size of the message is in {\bfseries Big} {\bfseries Endian} format ! 
+\end{DoxyItemize}\hypertarget{classpacpus_1_1SickLDMRSSensor_a1032c614191b0bbd9a5d2c36f362e70b}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!is\-Message\-Complete@{is\-Message\-Complete}}
+\index{is\-Message\-Complete@{is\-Message\-Complete}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{is\-Message\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}bool pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::is\-Message\-Complete (
+\begin{DoxyParamCaption}
+\item[{const unsigned}]{length, }
+\item[{const long}]{size}
+\end{DoxyParamCaption}
+)}}\label{classpacpus_1_1SickLDMRSSensor_a1032c614191b0bbd9a5d2c36f362e70b}
+
+
+is\-Message\-Complete compare the size of the message read into the message and the length of the received data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length of the received data. \\
+\hline
+{\em size} & Size of the message read. See get\-Message\-Size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries true} if the message is complete, {\bfseries false} otherwise 
+\end{DoxyReturn}
+\hypertarget{classpacpus_1_1SickLDMRSSensor_a01d9dc51e9220f828cb3651cf8b21e09}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!process\-Message@{process\-Message}}
+\index{process\-Message@{process\-Message}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{process\-Message}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::process\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-L\-D\-M\-R\-S} \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classpacpus_1_1SickLDMRSSensor_a01d9dc51e9220f828cb3651cf8b21e09}
+
+
+Process/decode a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message is encapsulated into a \hyperlink{classpacpus_1_1MessageLDMRS}{Message\-L\-D\-M\-R\-S} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type of the message
+\end{DoxyReturn}
+Process the raw data of the message and update the \hyperlink{classpacpus_1_1MessageLDMRS}{Message\-L\-D\-M\-R\-S} object passed \-: it fills the 2 headers (message and scan) and replace the body field of the Message\-L\-D\-R\-M\-S object by an array of \hyperlink{structpacpus_1_1ScanPoint}{Scan\-Point}.
+\begin{DoxyItemize}
+\item {\bfseries Warning} \-: the process of object data type is not implemented yet ! 
+\end{DoxyItemize}\hypertarget{classpacpus_1_1SickLDMRSSensor_a5a3dd4f58b4d43fed06ff28db5822d5d}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!split\-Packet@{split\-Packet}}
+\index{split\-Packet@{split\-Packet}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{split\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::split\-Packet (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{packet, }
+\item[{const int}]{length, }
+\item[{road\-\_\-time\-\_\-t}]{time}
+\end{DoxyParamCaption}
+)}}\label{classpacpus_1_1SickLDMRSSensor_a5a3dd4f58b4d43fed06ff28db5822d5d}
+
+
+split\-Packet reconstitute incoming data and find messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Raw data coming from the sensor. \\
+\hline
+{\em length} & Length of the data. \\
+\hline
+{\em time} & Time of the last received data.\\
+\hline
+\end{DoxyParams}
+Analyse the ethernet packet received from the Sick sensor and try to find a complete message (scan data message or object message) If a message has been found it is added at the end of the message list else the pending bytes are stored to be analyzed by further incoming data. \hypertarget{classpacpus_1_1SickLDMRSSensor_a2b82c6f677fe7e7e712b7397fb5390ee}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!start\-Activity@{start\-Activity}}
+\index{start\-Activity@{start\-Activity}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{start\-Activity}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::start\-Activity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpacpus_1_1SickLDMRSSensor_a2b82c6f677fe7e7e712b7397fb5390ee}
+To start the processing thread 
+
+Implements \hyperlink{classpacpus_1_1AbstractSickSensor_af8e017866cf70db766dbd11b60a52425}{pacpus\-::\-Abstract\-Sick\-Sensor}.
+
+\hypertarget{classpacpus_1_1SickLDMRSSensor_a5b3674df80e98093692fac9643819ab5}{\index{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}!stop\-Activity@{stop\-Activity}}
+\index{stop\-Activity@{stop\-Activity}!pacpus::SickLDMRSSensor@{pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor}}
+\subsubsection[{stop\-Activity}]{\setlength{\rightskip}{0pt plus 5cm}void pacpus\-::\-Sick\-L\-D\-M\-R\-S\-Sensor\-::stop\-Activity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpacpus_1_1SickLDMRSSensor_a5b3674df80e98093692fac9643819ab5}
+To stop the processing thread 
+
+Implements \hyperlink{classpacpus_1_1AbstractSickSensor_a14c6da8df61d91f2b63439df00fd5d6a}{pacpus\-::\-Abstract\-Sick\-Sensor}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Sick\-L\-D\-M\-R\-S\-Sensor.\-h\item 
+Sick\-L\-D\-M\-R\-S\-Sensor.\-cpp\end{DoxyCompactItemize}

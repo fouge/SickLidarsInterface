@@ -1,0 +1,34 @@
+\hypertarget{structpacpus_1_1MessagePacket}{\section{pacpus\-:\-:Message\-Packet Struct Reference}
+\label{structpacpus_1_1MessagePacket}\index{pacpus\-::\-Message\-Packet@{pacpus\-::\-Message\-Packet}}
+}
+
+
+Structure used to stored Sick data between several decoding processes.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\-Sick\-Sensor.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structpacpus_1_1MessagePacket_a8662b64b5eba2ca27aeba340e79a47c9}{road\-\_\-time\-\_\-t {\bfseries time}}\label{structpacpus_1_1MessagePacket_a8662b64b5eba2ca27aeba340e79a47c9}
+
+\item 
+\hypertarget{structpacpus_1_1MessagePacket_afcacd2d4d236410ad9352050e42346e7}{std\-::string {\bfseries data}}\label{structpacpus_1_1MessagePacket_afcacd2d4d236410ad9352050e42346e7}
+
+\item 
+\hypertarget{structpacpus_1_1MessagePacket_afd653684969f8d6f68564559d82b7241}{bool {\bfseries previous\-Data}}\label{structpacpus_1_1MessagePacket_afd653684969f8d6f68564559d82b7241}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure used to stored Sick data between several decoding processes. 
+
+Note that data coming from sensors are split in I\-P packets. In order to get the whole message in one block, \hyperlink{structpacpus_1_1MessagePacket}{Message\-Packet} is used to reconstitue the raw data. As we want to reconstitute the message, it is useful to know if another packet belonging to the message was previously received. Also, the time of the reception of the first packet is carried into the structure in order to trace scans. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Abstract\-Sick\-Sensor.\-h\end{DoxyCompactItemize}

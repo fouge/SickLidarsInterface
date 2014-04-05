@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pacpus>
+	<components>
+        <Sick
+        type="SickComponent" sickldmrs_0="192.168.0.1:12002" sickldmrs_0_recording="1"
+        />
+    </components>
+    <parameters>
+    	<plugins list="libSick.so" />
+    </parameters>
+</pacpus>
+
+<!-- 
+	<?xml version="1.0" encoding="ISO-8859-1"?>
+<pacpus>
+	<components>
+        <Sick type="SickComponent" sickldmrs_0="192.168.0.1:12002" sickldmrs_0_recording="1" />
+        <Sick type="SickComponent"  sicklms151_0="192.168.0.10:2111" sicklms151_0_recording="1" />
+        <Sick type="SickComponent"  sicklms511_0="192.168.0.50:2111" sicklms511_0_recording="1" />
+    </components>
+    <parameters>
+    	<plugins list="libSick.so" />
+    </parameters>
+</pacpus>
+
+	
+-->
