@@ -48,8 +48,9 @@ namespace pacpus {
  * This class defines a PACPUS component used to acquire Sick lidars data.
  */
 class SICK_API SickComponent
-        : public QThread
-        , public ComponentBase
+        : /*public QThread
+        , */
+        public QObject, public ComponentBase
 {
     Q_OBJECT
 
@@ -60,7 +61,7 @@ public:
     /// Destructor
     ~SickComponent();
 
-    void run() {}
+   // void run() {}
 
     virtual void stopActivity(); /*!< To stop the processing thread */
     virtual void startActivity(); /*!< To start the processing thread */

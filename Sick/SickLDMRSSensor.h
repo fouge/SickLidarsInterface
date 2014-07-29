@@ -25,6 +25,8 @@
 #include <fstream>
 #include <string>
 
+#define BODY_MAX_SIZE   10000
+
 // Export macro for SickLDMRS DLL for Windows only
 #ifdef WIN32
 #   ifdef SICKLDMRS_EXPORTS
@@ -78,7 +80,7 @@ public:
 
     //! An array of characters : raw data then array of points or objects, depending on data type.
     /** This array pointer points to allocated in memory (basically, in heap (malloc)) and then must be freed (free) when the whole message is decoded and stored. */
-    char* body;
+    char body[BODY_MAX_SIZE];
 
     //! Time when the message is received.
     road_time_t time;

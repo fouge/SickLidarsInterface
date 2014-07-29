@@ -86,4 +86,4 @@
 \contentsline {subsubsection}{\numberline {3.19.2.1}send\discretionary {-}{}{}To\discretionary {-}{}{}Server}{26}{subsubsection.3.19.2.1}
 \contentsline {subsubsection}{\numberline {3.19.2.2}socket\discretionary {-}{}{}Connection\discretionary {-}{}{}Closed}{27}{subsubsection.3.19.2.2}
 \contentsline {subsubsection}{\numberline {3.19.2.3}socket\discretionary {-}{}{}Ready\discretionary {-}{}{}Read}{27}{subsubsection.3.19.2.3}
-\contentsline {part}{Index}{28}{section*.37}
+\contentsline {chapter}{Index}{28}{section*.37}

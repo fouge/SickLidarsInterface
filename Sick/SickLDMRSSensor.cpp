@@ -319,14 +319,19 @@ void SickLDMRSSensor:: splitPacket(const char * packet, const int length, road_t
             break;
         }
 
+        LOG_TRACE("(Packet reconstitution) Message complete ! ");
         // we have a complete message available that we can add to the list
-         MessageLDMRS msg;
+        MessageLDMRS msg;
 
         // we copy the bytes in the body message
-        char* messageData = (char*)malloc(msgSize);
-        memcpy(messageData, pendingBytes.data.c_str() + index, msgSize);
+//        char* messageData = (char*)malloc(msgSize);
+//        if(messageData == NULL){
+//            LOG_FATAL("(Packet reconstitution) Malloc FAILED. Packet lost.");
+//            return;
+//        }
+        memcpy(msg.body, pendingBytes.data.c_str() + index, msgSize);
 
-        msg.body = messageData;
+//        msg->body = messageData;
 
         // we set the timestamp of the message
         if (pendingBytes.previousData)
@@ -357,36 +362,34 @@ unsigned long SickLDMRSSensor::processMessage(MessageLDMRS &msg)
         fillScanHeader(msg);
 
         int index = 24 + 44; // data header + scan header
-        ScanPoint* scanPoints = (ScanPoint*) malloc(sizeof(ScanPoint) * msg.hScan.numPoints);
-        int position = 0;
 
-        for (int i = 0; i < msg.hScan.numPoints; ++i) {
-            ((ScanPoint*)(scanPoints + position))->layerEcho = *((uchar*)(msg.body + index));
-            ((ScanPoint*)(scanPoints + position))->flags = *((uchar*)(msg.body + index + 1));
-            ((ScanPoint*)(scanPoints + position))->angle = *((u_int16_t*)(msg.body + index + 2));
-            ((ScanPoint*)(scanPoints + position))->distance = *((u_int16_t*)(msg.body + index + 4));
-            ((ScanPoint*)(scanPoints + position))->echoPulseWidth = *((u_int16_t*)(msg.body + index + 6));
-            index += 10;
-            position += sizeof(ScanPoint);
+        if(sizeof(ScanPoint) * msg.hScan.numPoints > BODY_MAX_SIZE){
+            LOG_FATAL("Size of the message is too long !");
+            return 0;
         }
 
-        // raw data (message) no longer needed, free memory and replace with structured data
-        free(msg.body);
-        msg.body = (char*) scanPoints;
+        ScanPoint scanPoints[msg.hScan.numPoints];
+
+        // replace memory with structured data
+        for (int i = 0; i < msg.hScan.numPoints; ++i) {
+            scanPoints[i].layerEcho = *((uchar*)(msg.body + index));
+            scanPoints[i].flags = *((uchar*)(msg.body + index + 1));
+            scanPoints[i].angle = *((u_int16_t*)(msg.body + index + 2));
+            scanPoints[i].distance = *((u_int16_t*)(msg.body + index + 4));
+            scanPoints[i].echoPulseWidth = *((u_int16_t*)(msg.body + index + 6));
+        }
+
+        memcpy(msg.body, scanPoints, sizeof(ScanPoint) * msg.hScan.numPoints);
     }
     else if (msg.hData.dataType == SICKLDMRS_OBJECTDATA_TYPE){
         LOG_TRACE("(Process Message) Object Data Type!");
 
-
-
         // TODO
-
-        // raw message no longer needed, free memory
-        free(msg.body);
-        // msg.body = (char*) scanObjects;
     }
-    else // irrelevant data type
-        free(msg.body); // free raw data
+    else {// irrelevant data type
+        // TODO
+    }
+
 
     return msg.hData.dataType;
 }
@@ -404,6 +407,8 @@ void SickLDMRSSensor::writeData(MessageLDMRS &msg)
 //    entry.time = msg.time;
 //    entry.timerange = msg.timerange;
 
+    LOG_TRACE("Writing into DBT + UTC files..");
+
     // write DBT
     try {
         dbtFile_.writeRecord(msg.time, msg.timerange, (char *) &entry, sizeof(SickLDMRS_dbt));
@@ -419,6 +424,8 @@ void SickLDMRSSensor::writeData(MessageLDMRS &msg)
     // add a magic word to delimit the block of data
     int32_t utcMagicWord = UTC_MAGIC_WORD;
     dataFile_.write(reinterpret_cast<char*>(&(utcMagicWord)), sizeof(int32_t));
+
+    LOG_TRACE("Writing done !");
 
 }
 
@@ -449,7 +456,7 @@ void SickLDMRSSensor::customEvent(QEvent * e)
         // get the first (the eldest) message and process it
         MessageLDMRS msgToProcess = msgList.front();
         unsigned long type = processMessage(msgToProcess);
-        LOG_TRACE("Message processed -> writing to DBT if needed");
+        LOG_TRACE("Message processed !");
 
         if (type == SICKLDMRS_SCANDATA_TYPE)
         {
@@ -481,6 +488,7 @@ void SickLDMRSSensor::customEvent(QEvent * e)
         }
 
         // removes the processed item of the list
+        // free(msgList.front().body);
         msgList.pop_front();
     }
 }

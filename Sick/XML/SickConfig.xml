@@ -6,7 +6,7 @@
         />
     </components>
     <parameters>
-    	<plugins list="libSick.so" />
+    	<plugins list="../lib/libSick.so" />
     </parameters>
 </pacpus>
 
@@ -19,7 +19,7 @@
         <Sick type="SickComponent"  sicklms511_0="192.168.0.50:2111" sicklms511_0_recording="1" />
     </components>
     <parameters>
-    	<plugins list="libSick.so" />
+    	<plugins list="../lib/libSick.so" />
     </parameters>
 </pacpus>
 

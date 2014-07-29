@@ -53,7 +53,8 @@ struct DataHeader {
                                     ///<     - Objects : 0x2221
     u_int64_t ntpTime;              //!< Time of the sensor when the message is created
 };
-    
+
+
 /*!
  * \brief The ScanHeader struct
  *

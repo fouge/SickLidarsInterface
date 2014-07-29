@@ -16,8 +16,8 @@
 #include <iostream>
 #include <string>
 
-#include "kernel/Log.h"
-#include "PacpusTools/ShMem.h"
+#include "Pacpus/kernel/Log.h"
+#include "Pacpus/PacpusTools/ShMem.h"
 
 
 #define UTC_MAGIC_WORD  0x55544300

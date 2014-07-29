@@ -17,18 +17,9 @@ cmake_minimum_required(VERSION 2.8)
 # ========================================
 set(PacpusSensors_MAJOR_VERSION 0)
 set(PacpusSensors_MINOR_VERSION 1)
-set(PacpusSensors_PATCH_VERSION 0)
+set(PacpusSensors_PATCH_VERSION 1)
 set(PacpusSensors_VERSION
     "${PacpusSensors_MAJOR_VERSION}.${PacpusSensors_MINOR_VERSION}.${PacpusSensors_PATCH_VERSION}")
-
-# ========================================
-# CMake variables
-# ========================================
-#set(PacpusSensors_ROOT_DIR         ${CMAKE_SOURCE_DIR})
-#set(PacpusSensors_CMAKE_DIR        ${PacpusSensors_ROOT_DIR}/cmake)
-#set(PacpusSensors_DOC_DIR          ${PacpusSensors_ROOT_DIR}/doc)
-#set(PacpusSensors_INCLUDE_DIR      ${PacpusSensors_ROOT_DIR}/include)
-set(PACPUS_INCLUDE_DIR      ${PACPUS_ROOT_DIR}/include)
 
 # ========================================
 # Configure CMake 
@@ -91,13 +82,16 @@ include_directories(
 # ========================================
 # Build the PacpusSensors' modules
 # ========================================
-#add_subdirectory(Alasca)
-#add_subdirectory(CanGateway)
-add_subdirectory(StdDbtPlayerComponents)
-#add_subdirectory(Dualshock)
-#add_subdirectory(Wifibot)
-#add_subdirectory(PacpusSocket)
-add_subdirectory(Sick)
+# add_subdirectory(Alasca)
+# add_subdirectory(CanGateway)
+# add_subdirectory(PtGreyCameras)
+# add_subdirectory(Dualshock)
+# add_subdirectory(PacpusSocket)
+# add_subdirectory(Sick)
+add_subdirectory(StereoVisionDisparity)
+# add_subdirectory(SensorsApplication)
+# add_subdirectory(StdDbtPlayerComponents)
+# add_subdirectory(Wifibot)
 
 # ========================================
 # Summary

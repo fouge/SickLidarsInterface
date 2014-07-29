@@ -15,7 +15,7 @@
 
 #include <fstream>
 
-#include "DbitePlayer/DbtPlyFileManager.h"
+#include "Pacpus/DbitePlayer/DbtPlyFileManager.h"
 #include "../Sick/SickLMSData.h"
 
 // Export macro for DbtPlySick DLL for Windows only

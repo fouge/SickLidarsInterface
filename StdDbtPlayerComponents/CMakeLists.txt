@@ -21,8 +21,8 @@ pacpus_plugin(PLUGIN_CPP PLUGIN_H ${PROJECT_NAME} )
 
 set(HDRS
 	StdDbtPlayerComponentsConfig.h
-    DbtPlySickLMSManager.h
-    DbtPlySickLDMRSManager.h
+    # DbtPlySickLMSManager.h
+    # DbtPlySickLDMRSManager.h
 )
 
 
@@ -31,8 +31,8 @@ set(HDRS
 # ========================================
 set(
     PROJECT_SRCS
-    DbtPlySickLMSManager.cpp
-    DbtPlySickLDMRSManager.cpp
+    # DbtPlySickLMSManager.cpp
+    # DbtPlySickLDMRSManager.cpp
 	${HDRS}
     ${PLUGIN_CPP}
 )

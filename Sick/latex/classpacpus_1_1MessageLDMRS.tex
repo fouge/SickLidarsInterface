@@ -28,7 +28,7 @@ The class carrying Sick L\-D\-M\-R\-S message.
 \hypertarget{classpacpus_1_1MessageLDMRS_aa67a394ee95860cf887abb671b53fc8f}{\hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} \hyperlink{classpacpus_1_1MessageLDMRS_aa67a394ee95860cf887abb671b53fc8f}{h\-Scan}}\label{classpacpus_1_1MessageLDMRS_aa67a394ee95860cf887abb671b53fc8f}
 
 \begin{DoxyCompactList}\small\item\em An instance of \hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} (if data type is scan points). \end{DoxyCompactList}\item 
-char $\ast$ \hyperlink{classpacpus_1_1MessageLDMRS_a33219ceede2224cd2cece39772d1012b}{body}
+char \hyperlink{classpacpus_1_1MessageLDMRS_ad4f54e3688d2cca3f9175b9622dbed24}{body} \mbox{[}B\-O\-D\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E\mbox{]}
 \begin{DoxyCompactList}\small\item\em An array of characters \-: raw data then array of points or objects, depending on data type. \end{DoxyCompactList}\item 
 \hypertarget{classpacpus_1_1MessageLDMRS_adf281676d8146037ecf51805d0e6217e}{road\-\_\-time\-\_\-t \hyperlink{classpacpus_1_1MessageLDMRS_adf281676d8146037ecf51805d0e6217e}{time}}\label{classpacpus_1_1MessageLDMRS_adf281676d8146037ecf51805d0e6217e}
 
@@ -44,9 +44,9 @@ The class carrying Sick L\-D\-M\-R\-S message.
 This class is used so that we can store every information sent by a Sick L\-D\-M\-R\-S sensor. First, the raw data is stored in {\ttfamily body}. These data are then decoded and general information about the message is stored in \hyperlink{structpacpus_1_1DataHeader}{Data\-Header} and \hyperlink{structpacpus_1_1ScanHeader}{Scan\-Header} (Object data decoding is not implemented yet). Then, the body field is replaced by a \hyperlink{structpacpus_1_1ScanPoint}{Scan\-Point} or \hyperlink{structpacpus_1_1ScanObject}{Scan\-Object} array in order to be stored in D\-B\-T/\-U\-T\-C files. 
 
 \subsection{Member Data Documentation}
-\hypertarget{classpacpus_1_1MessageLDMRS_a33219ceede2224cd2cece39772d1012b}{\index{pacpus\-::\-Message\-L\-D\-M\-R\-S@{pacpus\-::\-Message\-L\-D\-M\-R\-S}!body@{body}}
+\hypertarget{classpacpus_1_1MessageLDMRS_ad4f54e3688d2cca3f9175b9622dbed24}{\index{pacpus\-::\-Message\-L\-D\-M\-R\-S@{pacpus\-::\-Message\-L\-D\-M\-R\-S}!body@{body}}
 \index{body@{body}!pacpus::MessageLDMRS@{pacpus\-::\-Message\-L\-D\-M\-R\-S}}
-\subsubsection[{body}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pacpus\-::\-Message\-L\-D\-M\-R\-S\-::body}}\label{classpacpus_1_1MessageLDMRS_a33219ceede2224cd2cece39772d1012b}
+\subsubsection[{body}]{\setlength{\rightskip}{0pt plus 5cm}char pacpus\-::\-Message\-L\-D\-M\-R\-S\-::body\mbox{[}B\-O\-D\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E\mbox{]}}}\label{classpacpus_1_1MessageLDMRS_ad4f54e3688d2cca3f9175b9622dbed24}
 
 
 An array of characters \-: raw data then array of points or objects, depending on data type. 
